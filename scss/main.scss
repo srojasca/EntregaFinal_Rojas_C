@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@import "__navbar.scss";
+@import "__footer.scss";
+@import "index.scss";
+@import "_producto.scss";
+@import "_nosotros.scss";
+@import "_faq.scss";
+@import "_contact.scss";
+@import "_responsive.scss";
+

@@ -4,7 +4,7 @@
 
 .form_contact{
     text-align: center;
-    background-color: rgb(172, 249, 244);
+    background-color: $celeste_agua;
     display: block;
 }
 
@@ -13,7 +13,7 @@
 }
 
 .form_contact{
-    background-color:rgb(241, 235, 236);
+    background-color:$rosado_cards;
     padding: 1rem;
     width: 70%;
     text-align: left;
@@ -25,8 +25,8 @@
 }
 
 input{
-    background-color: rgb(172, 249, 244);
-    border-color: rgb(250, 215, 220);
+    background-color: $celeste_agua;
+    border-color: $celeste_agua;
 }
 
 #contact1 {
@@ -76,4 +76,13 @@ input{
     margin-top: 2%;
     margin-bottom: 2%;
     text-align: center;
+}
+
+.main_contact--p{
+    text-align: center;
+}
+
+p{
+    padding-top: 0.5rem;
+    font-size: 20px;
 }

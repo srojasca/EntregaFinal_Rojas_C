@@ -29,14 +29,19 @@
 }
 
 .product_title{
+    width: 100%;
+    background-color: $celeste_agua;
     margin-top: 1rem;
-    margin-bottom: 1rem ;
-    margin-left: 3rem;
+    margin-bottom: 2rem ;
+    margin-left: 5rem;
+    padding-left: 1rem ; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     text-align: left;
 }
 
 .div_ul_p{
-    padding: 2%;
+    padding: 10%;
     align-items: center;
     text-align: justify;
 }
@@ -48,18 +53,28 @@
 }
 
 .product_title--h2{
-    background-color: rgb(172, 249, 244);
+    width: 100%;
+    background-color: $celeste_agua;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 .div_p2{
     width: 50%;
-    align-items: center;
-    padding: 5%;
+    padding-left:15%;
+    padding-top: 10%;
+    text-align: left;
+    font-size: larger;
 
 }
+
+.div_p2--li{
+    list-style: none;
+}
+
 #div_ul_img2{
-    width: 95%;
-    text-align: center;
+    width: 75%;
+    padding-left: 15%;
     padding-top: 0.7rem;
 }
 
@@ -69,10 +84,14 @@
 }
 
 button{
-    background-color: rgb(239, 129, 146);
-    border: solid;
-    border-color: rgb(239, 129, 146);
+    background-color: $celeste_agua;
+    border-color: $celeste_agua;
     font-weight: bold;
     padding: 0.2rem;
     margin: 1rem;
 }
+
+li{
+    margin-bottom: 0.5rem;
+}
+

@@ -1,3 +1,45 @@
+@media screen and (max-width:1000px){
+    #body_menu--card2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .burguerMenu{
+        padding-top: 0.6rem;
+        display: flex;
+    }
+
+    .container_nav--img{
+        width: 15%;
+        text-align: center;
+    }
+
+    .container_nav--links{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content:space-around;
+        left: 0;
+        width: 90%;
+        text-decoration-line: none;
+    }
+
+    /*intenté hacer el menú hamburguesa, solamente me faltó hacer el link entre el menú y los enlaces pero por tiempo no pude*/
+
+    .container_nav--links a:hover, .container_nav--links a.active{
+        left: 0;
+    }
+
+    .burger:checked ~ .container_nav--links{
+        left: 0;
+    }
+
+    .container_nav--icons{
+        display: none;
+    }
+
+}    
 @media screen and (max-width:426px){
     /*----------------INDEX SHEET--------------- */
         /* NAVBAR */
@@ -14,9 +56,6 @@
             width: 100%;
         }
         /* MAIN */
-        .menu_desplegable{
-            display: none;
-        }
     
         .body_menu--card2{
             width: 100%;
@@ -121,7 +160,7 @@
 
         .form_contact{
             width: 80%;
-            background-color: rgb(241, 235, 236);
+            background-color: $rosado_fondo;
         }
 
         label{
@@ -129,8 +168,8 @@
         }
 
         input{
-            background-color: rgb(172, 249, 244);
-            border-color: rgb(250, 215, 220);
+            background-color: $celeste_agua;
+            border-color: $rosado_fondo;
         }
         
         #contact1{
@@ -183,6 +222,10 @@
             background-color: blanchedalmond;
             padding: 0.5rem;
             border: 0.5rem solid blanchedalmond;
+        }
+
+        #rating_container{
+            display: none;
         }
 }
 

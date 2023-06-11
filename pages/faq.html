@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/main.css">
     <title>FenixClothes | FAQ</title>
     <link rel="icon" type="image/x-icon" href="../imagenes/logo.png">
@@ -39,30 +39,91 @@
     </header>
 
     <main class="main_faq">
-        <h1 class="h1_faq">Título</h1>
+        <h1 class="h1_faq">¿Tienes dudas?</h1>
         <div id="p_description">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitatii n ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est labo.</p>
+            <p>A continuación te dejamos una selección de las preguntas que nuestro clientes nos hacen con mayor frecuencia. Si tu problema sigue sin respuesta después de revisar esta sección, no dudes en escribirnos mediante nuestro formulario: <a href="./contact.html">Contacto</a></p>
         </div>
-        <div class="faq_question">
-            <h2>Pregunta</h2>
-            <div class="faq_paragraph">
-                <p class="p_faq">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quisnostrud exercitatiin ullamco.</p>
+        <div class="container_accordion">
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        ¿Cómo realizo la compra de un producto?
+                    </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body">
+                            Para comprar cualquiera de nuestras prendas, <strong>solamente debes hacer clic en el producto, seleccionar la talla y listo!</strong> Tu producto se incorporará en el carrito de compra de nuestra web.
+                            Cuando termines de seleccionar los productos que desee comprar, solamente debes ingresar al carrito de compra y seleccionar el botón "Finalizar pedido", este te llevará a la plataforma de pago y agendamiento de la entrega del producto.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                            ¿Existe alguna tienda física donde se pueda comprar?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body">
+                            Lamentablemente en este momento no disponemos de alguna tienda física. Esperamos en los próximos meses disponer de algún lugar, el cuál será notificado y publicitado en nuestra página web :D. De todas formas, disponemos con un despacho a domicilio muy rápido.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button id="accordion-bakcground" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                            ¿Cuánto demoran mis productos en ser despachados?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body">
+                            Dependiendo de la hora en que realices la compra y de tu ubicación geográfica, el despacho puede demorar entre 24 hrs y 7 días hábiles.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                        <button id="accordion-bakcground" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                            ¿Qué hago si tuve un problema con el pago?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body">
+                            En este caso, por favor escríbenos a nuestro correo (contacto@fenixclothes.cl) o mediante nuestro formulario. Te recomendamos incorporar capturas de pantallas del problema y el número de orden.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                        <button id="accordion-bakcground" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                            ¿Cuáles son los medios de pago disponibles?
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                        <div class="accordion-body">
+                            Actualmente disponemos de pago mediante transferencia bancaria, Webpay y Khipu.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="faq_question">
-            <h2>Pregunta</h2>
-        </div>  
-        <div class="faq_question">
-            <h2>Pregunta</h2>
+        <div id="rating_container">
+            <h4 class="producto_h2_evaluacion">Evalúa tu experiencia con nosotros:</h4>
+            <div class="rating">
+                <input type="radio" id="star5" name="rate" value="1">
+                <label for="star1" title="text"></label>
+                <input type="radio" id="star4" name="rate" value="2">
+                <label for="star2" title="text"></label>
+                <input checked="" type="radio" id="star3" name="rate" value="3">
+                <label for="star3" title="text"></label>
+                <input type="radio" id="star2" name="rate" value="4">
+                <label for="star4" title="text"></label>
+                <input type="radio" id="star1" name="rate" value="5">
+                <label for="star5" title="text"></label>
+            </div>
         </div>
-        <div class="faq_question">
-            <h2>Pregunta</h2>
-        </div>
-        <div class="faq_question">
-            <h2>Pregunta</h2>
-        </div>
-    
-    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     </main>
 
     <footer>

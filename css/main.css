@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0px;
   padding: 0px;
@@ -135,7 +136,7 @@ footer {
 /* BODY--------------------------------------------- */
 body {
   font-family: "Lato", sans-serif;
-  background-color: rgb(250, 215, 220);
+  background-color: rgb(241, 235, 236);
 }
 
 /* SEARCHING BAR */
@@ -143,9 +144,80 @@ body {
   width: 100%;
   height: 2rem;
   text-align: center;
-  background-color: rgb(250, 215, 220);
+  background-color: rgb(241, 235, 236);
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+/* BURGUER MENU*/
+.burger {
+  position: relative;
+  width: 40px;
+  height: 30px;
+  background: transparent;
+  cursor: pointer;
+  display: block;
+  display: none;
+}
+
+.burger input {
+  display: none;
+}
+
+.burger span {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background: black;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+  top: 0px;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+  top: 100%;
+  -webkit-transform-origin: left center;
+          transform-origin: left center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+
+.burger input:checked ~ span:nth-of-type(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 0px;
+  left: 5px;
+}
+
+.burger input:checked ~ span:nth-of-type(2) {
+  width: 0%;
+  opacity: 0;
+}
+
+.burger input:checked ~ span:nth-of-type(3) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 28px;
+  left: 5px;
 }
 
 input[type=search] {
@@ -163,27 +235,9 @@ input[type=search] {
   display: flex;
 }
 
-/* MENU DESPLEGABLE */
-.menu_desplegable {
-  width: 15%;
-  background-color: rgb(250, 215, 220);
-  padding-left: 1rem;
-  padding-top: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  border-style: solid;
-  border-color: rgb(172, 249, 244);
-  border-width: 10rem 0rem 20rem 1rem;
-}
-
 /* CLOTHES CARD */
 .body_menu--card2 {
-  width: 85%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,6 +250,8 @@ input[type=search] {
 }
 
 .card {
+  background-color: rgb(250, 215, 220);
+  border: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -207,10 +263,6 @@ input[type=search] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 0.2rem;
-}
-
-.card_paragraph {
-  width: 90%;
 }
 
 .card_image {
@@ -276,14 +328,19 @@ input[type=search] {
 }
 
 .product_title {
+  width: 100%;
+  background-color: rgb(172, 249, 244);
   margin-top: 1rem;
-  margin-bottom: 1rem;
-  margin-left: 3rem;
+  margin-bottom: 2rem;
+  margin-left: 5rem;
+  padding-left: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   text-align: left;
 }
 
 .div_ul_p {
-  padding: 2%;
+  padding: 10%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -297,20 +354,27 @@ input[type=search] {
 }
 
 .product_title--h2 {
+  width: 100%;
   background-color: rgb(172, 249, 244);
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .div_p2 {
   width: 50%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 5%;
+  padding-left: 15%;
+  padding-top: 10%;
+  text-align: left;
+  font-size: larger;
+}
+
+.div_p2--li {
+  list-style: none;
 }
 
 #div_ul_img2 {
-  width: 95%;
-  text-align: center;
+  width: 75%;
+  padding-left: 15%;
   padding-top: 0.7rem;
 }
 
@@ -321,12 +385,15 @@ input[type=search] {
 }
 
 button {
-  background-color: rgb(239, 129, 146);
-  border: solid;
-  border-color: rgb(239, 129, 146);
+  background-color: rgb(172, 249, 244);
+  border-color: rgb(172, 249, 244);
   font-weight: bold;
   padding: 0.2rem;
   margin: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
 }
 
 .main_nosotros {
@@ -357,6 +424,7 @@ button {
   margin-bottom: 2rem;
   width: 80%;
   text-align: justify;
+  padding-top: 1rem;
 }
 
 #div_ul {
@@ -381,6 +449,11 @@ button {
   width: 100%;
 }
 
+#div_ul_img2 {
+  width: 100%;
+  padding-left: 5%;
+}
+
 #div_ul2 {
   padding: 1rem;
   list-style: none;
@@ -391,10 +464,16 @@ button {
   margin-bottom: 20px;
   text-align: left;
   text-align: justify;
+  padding-top: 0.5rem;
+  font-size: 20px;
 }
 
 #div_ul_h3 {
   width: 100%;
+}
+
+p {
+  font-size: 20px;
 }
 
 .main_faq {
@@ -420,6 +499,81 @@ button {
   text-align: justify;
 }
 
+.accordion-item {
+  width: 100%;
+  background-color: blanchedalmond;
+}
+
+.container_accordion {
+  width: 80%;
+  margin-left: 0%;
+}
+.container_accordion .accordion-button.collapsed {
+  background-color: rgb(172, 249, 244);
+  margin-bottom: 1rem;
+}
+
+/*ESTRELLAS PARA MEDIR EXPERIENCIA*/
+.producto_h2_evaluacion {
+  margin-top: 2rem;
+  text-align: center;
+  color: rgb(239, 129, 146);
+}
+
+#rating_container {
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rating {
+  width: 40%;
+}
+
+.rating:not(:checked) > input {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  padding-right: 5%;
+  cursor: pointer;
+  font-size: 50px;
+  color: rgb(172, 249, 244);
+}
+
+.rating:not(:checked) > label:before {
+  content: "★";
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: rgb(239, 129, 146);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: rgb(239, 129, 146);
+}
+
+.rating > input:checked ~ label {
+  color: #ffa723 rgb(239, 129, 146);
+}
+
 .main_contact {
   padding-top: 5rem;
 }
@@ -435,7 +589,7 @@ button {
 }
 
 .form_contact {
-  background-color: rgb(241, 235, 236);
+  background-color: rgb(250, 215, 220);
   padding: 1rem;
   width: 70%;
   text-align: left;
@@ -448,7 +602,7 @@ button {
 
 input {
   background-color: rgb(172, 249, 244);
-  border-color: rgb(250, 215, 220);
+  border-color: rgb(172, 249, 244);
 }
 
 #contact1 {
@@ -500,6 +654,63 @@ input {
   text-align: center;
 }
 
+.main_contact--p {
+  text-align: center;
+}
+
+p {
+  padding-top: 0.5rem;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1000px) {
+  #body_menu--card2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .burguerMenu {
+    padding-top: 0.6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .container_nav--img {
+    width: 15%;
+    text-align: center;
+  }
+  .container_nav--links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    left: 0;
+    width: 90%;
+    text-decoration-line: none;
+  }
+  /*intenté hacer el menú hamburguesa, solamente me faltó hacer el link entre el menú y los enlaces pero por tiempo no pude*/
+  .container_nav--links a:hover, .container_nav--links a.active {
+    left: 0;
+  }
+  .burger:checked ~ .container_nav--links {
+    left: 0;
+  }
+  .container_nav--icons {
+    display: none;
+  }
+}
 @media screen and (max-width: 426px) {
   /*----------------INDEX SHEET--------------- */
   /* NAVBAR */
@@ -518,9 +729,6 @@ input {
     width: 100%;
   }
   /* MAIN */
-  .menu_desplegable {
-    display: none;
-  }
   .body_menu--card2 {
     width: 100%;
     -webkit-box-align: center;
@@ -653,7 +861,7 @@ input {
   }
   input {
     background-color: rgb(172, 249, 244);
-    border-color: rgb(250, 215, 220);
+    border-color: rgb(241, 235, 236);
   }
   #contact1 {
     width: 100%;
@@ -699,5 +907,8 @@ input {
     background-color: blanchedalmond;
     padding: 0.5rem;
     border: 0.5rem solid blanchedalmond;
+  }
+  #rating_container {
+    display: none;
   }
 }

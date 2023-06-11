@@ -4,7 +4,7 @@
 }
 
 .faq_question{
-    background-color: rgb(172, 249, 244);
+    background-color: $celeste_agua;
     margin: 2rem;
     width: 70%;
     padding: 1rem;
@@ -12,7 +12,7 @@
 }
 
 .p_faq{
-    background-color: blanchedalmond;
+    background-color: $rosado_faq;
     padding: 0.5rem;
 }
 
@@ -20,3 +20,75 @@
     width: 80%;
     text-align: justify;
 }
+
+.accordion-item{
+    width: 100%;
+    background-color: $rosado_faq;
+    
+}
+
+.container_accordion{
+    width: 80%;
+    margin-left: 0%;
+
+    .accordion-button.collapsed{
+        background-color: $celeste_agua;
+        margin-bottom: 1rem;
+    }
+    
+}
+
+
+/*ESTRELLAS PARA MEDIR EXPERIENCIA*/
+.producto_h2_evaluacion{
+    margin-top: 2rem;
+    text-align: center;
+    color:$rosado_navbar;
+}
+
+#rating_container{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.rating{
+    width: 40%;
+}
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+}
+
+.rating:not(:checked) > label {
+    float: right;
+    padding-right: 5%;
+    cursor: pointer;
+    font-size: 50px;
+    color: $celeste_agua;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+    color: $rosado_navbar;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: $rosado_navbar;
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723$rosado_navbar;
+}
+
+
+
